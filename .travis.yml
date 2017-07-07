@@ -18,9 +18,45 @@
 language: java
 jdk:
   - oraclejdk8
+cache:
+  directories:
+  - $HOME/.m2
+
+env:
+  - MODULE=flume-ng-sdk
+  - MODULE=flume-ng-configuration
+  - MODULE=flume-ng-auth
+  - MODULE=flume-ng-core
+  - MODULE=flume-tools
+  - MODULE=flume-ng-embedded-agent
+  - MODULE=flume-ng-node
+  - MODULE=flume-ng-sinks/flume-ng-elasticsearch-sink
+  - MODULE=flume-ng-sinks/flume-ng-hbase-sink
+  - MODULE=flume-ng-sinks/flume-hdfs-sink
+  - MODULE=flume-ng-sinks/flume-irc-sink
+  - MODULE=flume-ng-sinks/flume-ng-morphline-solr-sink
+  - MODULE=flume-ng-sinks/flume-ng-kafka-sink
+  - MODULE=flume-ng-sinks/flume-http-sink
+  - MODULE=flume-ng-sinks/flume-dataset-sink
+  - MODULE=flume-ng-sinks/flume-hive-sink
+  - MODULE=flume-ng-sources/flume-scribe-source
+  - MODULE=flume-ng-sources/flume-jms-source
+  - MODULE=flume-ng-sources/flume-twitter-source
+  - MODULE=flume-ng-sources/flume-kafka-source
+  - MODULE=flume-ng-sources/flume-taildir-source
+  - MODULE=flume-ng-channels/flume-kafka-channel
+  - MODULE=flume-ng-channels/flume-file-channel
+  - MODULE=flume-ng-channels/flume-spillable-memory-channel
+  - MODULE=flume-ng-channels/flume-jdbc-channel
+  - MODULE=flume-ng-legacy-sources/flume-avro-source
+  - MODULE=flume-ng-legacy-sources/flume-thrift-source
+  - MODULE=flume-shared/flume-shared-kafka-test
+  - MODULE=flume-ng-clients/flume-ng-log4jappender
+
+
 before_install:
   - export MAVEN_SKIP_RC="true" # Travis has settings in /etc/mavenrc. We want to override them. See https://github.com/travis-ci/travis-ci/issues/4613
 install:
-  - # Skip mvn install. See https://docs.travis-ci.com/user/languages/java/
+  -
 script:
-  - MAVEN_OPTS="-Xms512m -Xmx1024m" mvn clean install -DskipTests
+  - MAVEN_OPTS="-Xms512m -Xmx1024m" mvn test -B -fae -pl $MODULE
