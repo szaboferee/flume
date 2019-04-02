@@ -55,7 +55,7 @@ public abstract class SslContextAwareAbstractSource extends AbstractSource {
   private String keystoreType;
   private boolean sslEnabled = false;
   private final Set<String> excludeProtocols = new LinkedHashSet<>(Arrays.asList("SSLv3"));
-  private final Set<String> includeProtocols = new LinkedHashSet<>();
+  private final Set<String> includeProtocols = new LinkedHashSet<>(Arrays.asList("TLSv1.2"));
   private final Set<String> excludeCipherSuites = new LinkedHashSet<>();
   private final Set<String> includeCipherSuites = new LinkedHashSet<>();
 
