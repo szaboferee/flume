@@ -34,7 +34,7 @@ public abstract class SSLContextAwareAbstractRpcClient extends AbstractRpcClient
   protected String truststorePassword;
   protected String truststoreType;
   protected final Set<String> excludeProtocols = new LinkedHashSet<>(Arrays.asList("SSLv3"));
-  protected final Set<String> includeProtocols = new LinkedHashSet<>();
+  protected final Set<String> includeProtocols = new LinkedHashSet<>(Arrays.asList("TLSv1.2"));
   protected final Set<String> excludeCipherSuites = new LinkedHashSet<>();
   protected final Set<String> includeCipherSuites = new LinkedHashSet<>();
 
