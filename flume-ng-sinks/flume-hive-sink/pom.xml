@@ -36,6 +36,18 @@ limitations under the License.
   <artifactId>flume-hive-sink</artifactId>
   <name>Flume NG Hive Sink</name>
 
+  <profiles>
+    <profile>
+      <id>java-11</id>
+      <activation>
+        <jdk>[9,)</jdk>
+      </activation>
+      <properties>
+        <skipTests>true</skipTests>
+      </properties>
+    </profile>
+  </profiles>
+
   <dependencies>
 
     <dependency>

@@ -30,6 +30,18 @@
     <pmd.maxAllowedViolations>10</pmd.maxAllowedViolations>
   </properties>
 
+  <profiles>
+      <profile>
+          <id>java-11</id>
+          <activation>
+              <jdk>[9,)</jdk>
+          </activation>
+          <properties>
+              <skipTests>true</skipTests>
+          </properties>
+      </profile>
+  </profiles>
+
   <dependencies>
 
     <dependency>
