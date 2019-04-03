@@ -36,6 +36,18 @@ limitations under the License.
     <pmd.maxAllowedViolations>3</pmd.maxAllowedViolations>
   </properties>
 
+  <profiles>
+    <profile>
+      <id>java-11</id>
+      <activation>
+        <jdk>[9,)</jdk>
+      </activation>
+      <properties>
+        <!-- spotbugs has a false positive with java 11 -->
+        <spotbugs.maxAllowedViolations>15</spotbugs.maxAllowedViolations>
+      </properties>
+    </profile>
+  </profiles>
   <dependencies>
     <dependency>
       <groupId>org.apache.flume</groupId>
