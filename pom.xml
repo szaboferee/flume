@@ -48,7 +48,7 @@ limitations under the License.
 
     <activemq.version>5.7.0</activemq.version>
     <asynchbase.version>1.7.0</asynchbase.version>
-    <avro.version>1.7.4</avro.version>
+    <avro.version>1.9.0</avro.version>
     <bundle-plugin.version>2.3.7</bundle-plugin.version>
     <checkstyle.tool.version>8.12</checkstyle.tool.version>
     <codehaus.jackson.version>1.9.3</codehaus.jackson.version>
