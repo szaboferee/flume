@@ -48,7 +48,7 @@ limitations under the License.
 
     <activemq.version>5.7.0</activemq.version>
     <asynchbase.version>1.7.0</asynchbase.version>
-    <avro.version>1.7.4</avro.version>
+    <avro.version>1.9.0</avro.version>
     <bundle-plugin.version>2.3.7</bundle-plugin.version>
     <checkstyle.tool.version>8.12</checkstyle.tool.version>
     <codehaus.jackson.version>1.9.3</codehaus.jackson.version>
@@ -62,13 +62,13 @@ limitations under the License.
     <curator.version>2.6.0</curator.version>
     <derby.version>10.14.1.0</derby.version>
     <elasticsearch.version>0.90.1</elasticsearch.version>
-    <fasterxml.jackson.version>2.9.7</fasterxml.jackson.version>
+    <fasterxml.jackson.version>2.9.9</fasterxml.jackson.version>
     <fest-reflect.version>1.4</fest-reflect.version>
     <geronimo-jms.version>1.1.1</geronimo-jms.version>
     <gson.version>2.2.2</gson.version>
     <guava.version>18.0</guava.version>
-    <guava-old.version>11.0.2</guava-old.version>
-    <hadoop.version>2.9.0</hadoop.version>
+    <guava-old.version>24.1.1-jre</guava-old.version>
+    <hadoop.version>3.1.2</hadoop.version>
     <hbase.version>1.0.0</hbase.version>
     <hbase2.jetty.version>9.3.19.v20170502</hbase2.jetty.version>
     <hbase2.version>2.0.0</hbase2.version>
@@ -81,7 +81,7 @@ limitations under the License.
     <junit.version>4.10</junit.version>
     <kafka.version>2.0.1</kafka.version>
     <kite.version>1.0.0</kite.version>
-    <hive.version>1.0.0</hive.version>
+    <hive.version>3.0.0</hive.version>
     <lifecycle-mapping.version>1.0.0</lifecycle-mapping.version>
     <log4j.version>2.10.0</log4j.version>
     <mapdb.version>0.9.9</mapdb.version>
