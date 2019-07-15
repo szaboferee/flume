@@ -45,6 +45,7 @@ import org.apache.flume.annotations.Disposable;
 import org.apache.flume.channel.ChannelProcessor;
 import org.apache.flume.channel.ChannelSelectorFactory;
 import org.apache.flume.channel.DefaultChannelFactory;
+import org.apache.flume.channel.SinkSideInterceptorDecorator;
 import org.apache.flume.conf.BasicConfigurationConstants;
 import org.apache.flume.conf.BatchSizeSupported;
 import org.apache.flume.conf.ComponentConfiguration;
@@ -460,7 +461,7 @@ public abstract class AbstractConfigurationProvider implements ConfigurationProv
             throw new IllegalStateException(msg);
           }
           checkSinkChannelCompatibility(sink, channelComponent.channel);
-          sink.setChannel(channelComponent.channel);
+          sink.setChannel(new SinkSideInterceptorDecorator(channelComponent.channel, context));
           sinks.put(sinkName, sink);
           channelComponent.components.add(sinkName);
         } catch (Exception e) {
