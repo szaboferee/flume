@@ -38,7 +38,7 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: mvn integration-test -Djdk.net.URLClassPath.disableClassPathURLCheck=true
+      - run: mvn integration-test -Dsurefire.useSystemClassLoader=false
 
       - run:
           command: |
