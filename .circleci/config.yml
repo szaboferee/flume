@@ -39,3 +39,12 @@ jobs:
 
       # run tests!
       - run: mvn integration-test
+
+      - run:
+          command: |
+            mkdir -p /tmp/surefire-reports
+            cp **/surefire-reports/* /tmp/surefire-reports
+          when: on_fail
+
+      - store-artifacts:
+          path: /tmp/surefire-reports
